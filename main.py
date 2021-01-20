@@ -1,11 +1,13 @@
 # ---------------------------- IMPORTED MODULES ------------------------------- #
+import os
+import os
 import requests
 import datetime
 from requests.auth import HTTPBasicAuth
 
 # ---------------------------- EXERCISE APP SECTION ------------------------------- #
-EXERCISE_APP_ID = "a86c6134"
-EXERCISE_API_KEY = "42ed7399bc4c4e08101902d33b12a802"
+EXERCISE_APP_ID = os.environ.get('EXERCISE_APP_ID')
+EXERCISE_API_KEY = os.environ.get('EXERCISE_API_KEY')
 
 EXERCISE_URL = "https://trackapi.nutritionix.com/v2/natural/exercise"
 
